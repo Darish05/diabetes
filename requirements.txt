@@ -2,4 +2,4 @@ scikit-learn
 numpy
 pandas
 Flask
-joblibgit
+joblib
