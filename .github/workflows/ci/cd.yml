@@ -16,14 +16,17 @@ jobs:
         with:
           name: model
           path: "*.pkl"
-  deploy:
-    needs: train
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: model
-      - run: |
-          docker build -t ml-app .
-          docker run -d -p 5000:5000 ml-app
+
+
+
+  # deploy:
+  #   needs: train
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/download-artifact@v4
+  #       with:
+  #         name: model
+  #     - run: |
+  #         docker build -t ml-app .
+  #         docker run -d -p 5000:5000 ml-app
